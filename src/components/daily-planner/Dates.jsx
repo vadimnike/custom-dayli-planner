@@ -6,7 +6,7 @@ import EventModal from './EventModal';
 
 export default class Dates extends React.Component {
   state = {
-    dates: [],
+    dates: null,
     events: [],
     isOpenedModal: false
   };
@@ -32,12 +32,12 @@ export default class Dates extends React.Component {
       return hoursArray
     });
 
-    let momentVar = moment(hoursByDays[0], 'HH:mm a ddd MMM Do');
+    //let momentVar = moment(hoursByDays[0], 'HH:mm a ddd MMM Do');
     // console.log(momentVar);
 
-    this.setState({
-      dates: hoursByDays
-    });
+    // this.setState({
+    //   dates: hoursByDays
+    // });
     return hoursByDays;
   };
 
@@ -84,6 +84,8 @@ export default class Dates extends React.Component {
         }
         {
           this.state.isOpenedModal && <EventModal open={this.state.isOpenedModal}
+                                                  startDatesArray={this.state.dates || ['one', 'two', 'three']}
+                                                  endDatesArray={this.state.dates || ['one', 'two', 'three']}
                                                   handleCloseModal={this.handleCloseModal}
           />
         }

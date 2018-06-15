@@ -28,8 +28,14 @@ export default class EventModal extends React.Component {
               <div className="modal-wrap">
                 <h2 className='title'>Event form</h2>
                 <SelectComponent
-                  label='Start date of event'
+                  label='Start time of event'
                   name='event_start_date'
+                  collection={this.state.startDatesArray}
+                />
+
+                <SelectComponent
+                  label='Finish time of event'
+                  name='event_end_date'
                   collection={this.state.startDatesArray}
                 />
               </div>
