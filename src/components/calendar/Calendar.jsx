@@ -49,7 +49,7 @@ export default class Calendar extends React.Component {
 
 
   render() {
-    // console.log(time, fullTime);
+
     return (
       <div className='table-wrap'>
         <div className="momnet-wrapper">

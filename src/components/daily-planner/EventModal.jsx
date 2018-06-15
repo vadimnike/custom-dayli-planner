@@ -20,7 +20,6 @@ export default class EventModal extends React.Component {
     this.props.handleCloseModal();
   };
 
-
   render() {
     return (
             <form className='modal event-modal'>

@@ -11,13 +11,6 @@ export default class DaysOfMonth extends React.Component{
     month: this.props.month
   };
 
-  // componentWillReceiveProps(nextProps){
-  //   console.log('new month');
-  //   this.setState({
-  //     month: nextProps.month
-  //   })
-  // };
-
   isCurrentDay = ()=> moment().format("D");
 
 
@@ -47,7 +40,6 @@ export default class DaysOfMonth extends React.Component{
         </td>
       );
     };
-    // console.log("emptyCells: ", emptyCells);
 
     for(let day = 1; day <= daysOfMothLength; day++){
       let  classNames = ((day == this.isCurrentDay() && this.state.selectedDay===null) ? 'current-day' : (day==this.state.selectedDay) ? 'selected-day' : '' )
@@ -60,7 +52,6 @@ export default class DaysOfMonth extends React.Component{
 
 
     var fullDateCells = [...emptyCells, ...daysInMonth];
-    //console.log(fullDateCells);
 
     fullDateCells.forEach((dateCell, i) => {
       if ((i % 7) !== 0) {
@@ -85,8 +76,6 @@ export default class DaysOfMonth extends React.Component{
       );
     });
 
-
-    // console.log(this.state.month);
     return weeksArr
   };
 
