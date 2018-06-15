@@ -1,5 +1,5 @@
 import React from 'react';
-import  SelectComponent from '../blocks/SelectComponent';
+import SelectComponent from '../blocks/SelectComponent';
 
 export default class EventModal extends React.Component {
   state = {
@@ -22,24 +22,24 @@ export default class EventModal extends React.Component {
 
   render() {
     return (
-            <form className='modal event-modal'>
-              <i className="ic ic-close close-modal" onClick={this.handleCloseModal}></i>
-              <div className="modal-wrap">
-                <h2 className='title'>Event form</h2>
-                <SelectComponent
-                  label='Start time of event'
-                  name='event_start_date'
-                  collection={this.state.startDatesArray}
-                />
+      <form className='modal event-modal'>
+        <i className="ic ic-close close-modal" onClick={this.handleCloseModal}></i>
+        <div className="modal-wrap">
+          <h2 className='title'>Event form</h2>
+          <SelectComponent
+            label='Start time of event'
+            name='event_start_date'
+            collection={this.state.startDatesArray}
+          />
 
-                <SelectComponent
-                  label='Finish time of event'
-                  name='event_end_date'
-                  collection={this.state.startDatesArray}
-                />
-              </div>
-              <button type='submit'>Submit</button>
-            </form>
+          <SelectComponent
+            label='Finish time of event'
+            name='event_end_date'
+            collection={this.state.startDatesArray}
+          />
+        </div>
+        <button type='submit'>Submit</button>
+      </form>
     )
   }
 }

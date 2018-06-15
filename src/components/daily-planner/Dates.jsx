@@ -46,19 +46,17 @@ export default class Dates extends React.Component {
     document.body.classList.add('overlay');
 
 
-
     this.setState({
       isOpenedModal: !this.state.isOpenedModal
     })
   };
 
-  handleCloseModal = ()=> {
+  handleCloseModal = () => {
     document.body.classList.remove('overlay');
     this.setState({
       isOpenedModal: false
     });
   };
-
 
 
   render() {
