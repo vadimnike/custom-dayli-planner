@@ -1,0 +1,33 @@
+@import 'colors/project_default';
+
+// General ---------------
+
+// -----------------------
+
+// Header ---------------
+
+// -----------------------
+
+// Nav-bar ----------------
+
+// -----------------------
+
+// Footer ----------------
+
+// -----------------------
+
+// Buttons ---------------
+
+// -----------------------
+
+// Tables ----------------
+$table-border   : $base-border;
+$table-default-color  : color('default', 'grey');
+$table-caption  : color('default', 'grey');
+$table-selected-td  : color('state', 'green');
+$table-thead-border:  color('state', 'green');
+$table-thead-bg:  color('state', 'green');
+
+//Daily Planner
+$dp-header-bg: color('state', 'orange');
+$dp-header-border: color('default', 'grey');

@@ -1,0 +1,181 @@
+//Custom tabs
+.custom-tabs{
+  display: flex;
+  align-items: center;
+  margin: 0;
+
+  &-wrapper{
+
+  }
+
+  &-header {
+    background-color: #262e35;
+  }
+
+  &-label {
+    @include rem(font-size, 11px);
+    flex: 1;
+    align-items: center;
+    color: #898f9a;
+    text-transform: uppercase;
+
+    > a {
+      position: relative;
+      display: block;
+      padding: 16.5px 4px;
+      border-bottom: 4px solid transparent;
+      font-weight: 500;
+      color: inherit;
+      line-height: 1;
+      text-align: center;
+      transition: all 1s cubic-bezier(0.23, 1, 0.32, 1) 0ms;
+
+      &:after{
+        position: absolute;
+        left: 0;
+        bottom: -4px;
+        content: '';
+        width: 100%;
+        height: 13px;
+        background-image: linear-gradient(to bottom, rgba(249, 208, 38, 0), #f9d026);
+        visibility: hidden;
+        opacity: 0;
+        transition: all 1s cubic-bezier(0.23, 1, 0.32, 1) 0ms;
+      }
+    }
+
+    &:hover > a{
+      color: $white;
+    }
+
+
+    &:hover a,  a.active{
+      border-bottom: 4px solid  #f9d026;;
+
+      &:after {
+        visibility: visible;
+        opacity: 1;
+      }
+    }
+  }
+}
+
+.form {
+  .btn-wrap {
+    margin-top: 45px;
+  }
+
+  .two-column-wrapper {
+    .input-group {
+      margin-bottom: 35px!important;
+      label {
+        left: 15px !important;
+      }
+    }
+  }
+}
+
+.input-group {
+  input {
+    font-size:16px;
+    padding: 10px 0;
+    padding: 6px 0 7px;
+    display:block;
+    width:100%;
+    border:none;
+    border-bottom:1px solid $input-border-color;
+    color: #5b6067;
+  }
+
+  input:focus {
+    outline:none;
+    border-color: transparent;
+  }
+
+  /* LABEL ======================================= */
+  &:not(.checkbox-wrap){
+    label {
+      @include rem(font-size, 16px);
+      color:$input-focus-valid-color;
+      font-weight:normal;
+      position:absolute;
+      pointer-events:none;
+      left:0;
+      top:10px;
+      transition:0.2s ease all;
+      -moz-transition:0.2s ease all;
+      -webkit-transition:0.2s ease all;
+
+
+      + .helper-text{
+        @include rem(font-size, 11px);
+        margin-top: 5px;
+        color: $input-text-color;
+      }
+    }
+  }
+
+
+  /* active state */
+
+  input:focus ~ label, input:valid ~ label 		{
+    top:-15px;
+    font-size:11px;
+    //color: rgb(0, 188, 212);
+    color: $input-focus-valid-color;
+    text-transform: uppercase;
+  }
+
+  input:focus ~ label {
+    color:  $input-focus-label-color;
+  }
+
+  /* BOTTOM BARS ================================= */
+  .bar 	{
+    position:relative;
+    display:block;
+    width:100%;
+  }
+
+  .bar:before, .bar:after 	{
+    content:'';
+    height:2px;
+    width:0;
+    bottom:1px;
+    position:absolute;
+    //background:rgb(0, 188, 212);
+    background:  $input-focus-border-color;
+    transition:0.2s ease all;
+  }
+
+  .bar:before {
+    left:50%;
+  }
+  .bar:after {
+    right:50%;
+  }
+
+  /* active state */
+  input:focus ~ .bar:before, input:focus ~ .bar:after {
+    width:50%;
+  }
+
+  /* HIGHLIGHTER ================================== */
+  .highlight {
+    position:absolute;
+    height:60%;
+    width:100px;
+    top:25%;
+    left:0;
+    pointer-events:none;
+    opacity:0.5;
+  }
+
+  /* active state */
+  input:focus ~ .highlight {
+    //-webkit-animation:inputHighlighter 0.3s ease;
+    //-moz-animation:inputHighlighter 0.3s ease;
+    animation:inputHighlighter 0.3s ease;
+  }
+}
+

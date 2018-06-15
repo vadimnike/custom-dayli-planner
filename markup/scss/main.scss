@@ -1,0 +1,40 @@
+
+// Variables
+@import 'utilities/color';
+@import 'utilities/fonts_var';
+@import 'utilities/variables';
+@import 'utilities/mixins';
+@import 'utilities/placeholder';
+
+// Layouts;
+@import 'layouts/bootstrap';
+@import 'layouts/utilities/display';
+//@import 'layouts/utilities/flex';
+//@import 'layouts/utilities/sizing';
+//@import 'layouts/fake-material';
+@import 'layouts/icon';
+
+
+
+// Base
+// @import 'base/reset'; // uncomment if needed to use(not default template)
+@import 'base/normalize';
+@import 'base/fonts';
+@import 'base/typography';
+@import 'base/base';
+
+// General
+@import 'general/general';
+
+// @import 'general/forms'; // uncomment if needed to use(not default template)
+// @import 'general/popup'; // uncomment if needed to use(not default template)
+ @import 'general/table'; // uncomment if needed to use(not default template)
+
+// Modules
+@import 'modules/daily-planner';
+@import 'modules/event-modal';
+
+// State
+@import 'state/state';
+
+
