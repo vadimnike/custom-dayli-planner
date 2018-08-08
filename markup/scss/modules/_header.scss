@@ -1,0 +1,134 @@
+// Header block style
+header {
+  height: 80px;
+  background-color: $header-bg;
+  .custom-tabs-wrapper {
+    margin-left: 54px;
+    flex-grow: inherit;
+
+    a {
+      font-size: 16px;
+      text-transform: uppercase;
+    }
+  }
+  .inner-wrap{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 80px;
+    padding: 0 12px;
+  }
+
+  .logo{
+    line-height: 0;
+  }
+
+  .user-wrap {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    height: 100%;
+    word-break: break-all;
+    word-break: break-word;
+
+    > div {
+      flex: 1 0 auto;
+    }
+
+    .profile {
+      display: flex;
+      align-items: center;
+      color: $white;
+      transition: all 350ms ease-in-out 0s;
+
+      &:hover {
+        color: $profile-hover-color;
+      }
+
+      .ic{
+        margin-right: 8px;
+      }
+
+      .ic:before {
+        @include rem(font-size, 24px);
+      }
+    }
+
+    .logout {
+      margin-left: 16px;
+
+      &:hover .ic {
+        color: $logout-hover-color;
+      }
+
+      .ic {
+        color: $icon-logout-color;
+        transition: all 350ms ease-in-out 0s;
+
+        &:before {
+          @include rem(font-size, 24px);
+        }
+      }
+    }
+  }
+}
+
+
+@media(max-width: $medium-screen-down){
+ header{
+   height: 48px;
+
+   .inner-wrap {
+     height: 48px;
+     padding: 0 4px;
+   }
+
+   .logo{
+     flex: 0 1 23%;
+   }
+
+   .user-wrap {
+     flex: 1 0 77%;
+
+     .add-new-race, .add-new-coupon{
+       @include rem(font-size,12px);
+       margin-right: 9px;
+     }
+
+     .profile {
+       .profile-name {
+         display: none;
+       }
+
+       .ic {
+         display: block;
+         margin-right: 0;
+
+         &:before{
+           @include rem(font-size, 18px);
+         }
+       }
+     }
+   }
+ }
+}
+
+@media(max-width: $small-screen-down){
+  header {
+    .user-wrap {
+      .add-new-race, .add-new-coupon {
+        @include rem(font-size, 9px);
+        margin-right: 8px;
+
+        .ic {
+          margin-right: 6px;
+        }
+      }
+
+      .logout {
+        margin-left: 6px;
+      }
+    }
+  }
+}

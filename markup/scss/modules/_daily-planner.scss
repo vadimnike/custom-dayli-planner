@@ -1,0 +1,122 @@
+.daily-planner {
+  width: 100%;
+  min-width: 1000px;
+  overflow-y: auto;
+
+  &-wrap {
+    display: flex;
+  }
+
+  .header-block {
+    margin-top: 20px;
+    position: relative;
+    min-height:60px;
+    border:1px solid $dp-header-border;
+    border-bottom: 0;
+    background-color: $dp-header-bg;
+
+    span {
+      position: absolute;
+      left: 20px;
+      top: -24px;
+      padding: 10px;
+      background-color: $white;
+    }
+
+    .year{
+      font-size: 24px;
+      font-weight: 700;
+      text-align: center;
+    }
+  }
+
+  .weeks-column {
+    border-bottom: 1px solid $dp-header-border;
+  }
+
+
+  .table.weeks {
+    position: relative;
+
+    .table-head {
+      display: flex;
+
+      .table-cell {
+        flex-basis:14.285%;
+      }
+    }
+
+    .table-cell {
+      display: flex;
+      flex: 1 0 0;
+      align-items: center;
+      justify-content: center;
+      min-height: 100px;
+    }
+
+    .table-body {
+      display: flex;
+
+      .table-row {
+        display: flex;
+        flex-basis:14.285%;
+        flex-direction: column;
+      }
+
+      .table-cell {
+        cursor: pointer;
+      }
+    }
+
+    .next-step, .prev-step {
+      position: absolute;
+      padding: 0;
+      cursor: pointer;
+    }
+
+    .prev-step {
+      left: 2px;
+      top: 38px;
+    }
+    .next-step {
+      top: 34px;
+      right: 2px;
+      transform: rotate(180deg);
+    }
+  }
+
+  .cell, .table-head .table-cell{
+    height: 100px;
+    padding: 10px;
+  }
+
+  .table-cell {
+    vertical-align: middle;
+    border-right: 1px solid $dp-header-border;
+  }
+
+
+  .hours-columnn {
+    width: 100px;
+    border-bottom: 1px solid $dp-header-border;
+
+    .cell {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100px;
+      padding: 5px;
+      text-align: center;
+      border:1px solid $dp-header-border;
+      border-bottom: 0;
+    }
+  }
+
+  .weeks-column {
+    width: calc(100% - 100px);
+
+    .week-day-name {
+      padding: 0.5em;
+    }
+  }
+}
